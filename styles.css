@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Honey Salt';
+    src: url('fonts/HoneySalt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'KGPerfect Penmanship';
+    src: url('fonts/KGPerfectPenmanship.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Lathin Sandy';
+    src: url('fonts/LathinSandy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Monofonto';
+    src: url('fonts/Monofonto.otf') format('opentype');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -6,12 +26,14 @@ body, html {
     text-align: center;
     scroll-behavior: smooth;
 }
+
 .container {
     width: 100%;
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
+
 .slide {
     height: 100vh;
     display: flex;
@@ -19,7 +41,7 @@ body, html {
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
     background: url('background.png') no-repeat center center;
     background-size: cover;
     padding: 0 20px;
@@ -27,16 +49,111 @@ body, html {
     transition: opacity 0.5s ease-in-out;
     scroll-snap-align: start;
 }
-.btn {
-    display: inline-block;
-    background: #d63384;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: 0.3s;
+
+.titulo-cursiva {
+    font-family: 'Lathin Sandy';
+    font-size: 40px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
-.btn:hover {
-    background: #b82b6c;
+
+.subtitulo-cursiva {
+    font-family: 'Lathin Sandy';
+    font-size: 25px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.texto-normal {
+    font-family: 'Honey Salt';
+    font-size: 16px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.texto-claro {
+    font-family: 'KGPerfect Penmanship';
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.fecha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.mes {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.linea {
+    width: 100%;
+    height: 2px;
+    background-color: #876c86;
+    margin: 10px 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.dia-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.dia-semana {
+    font-family: 'KGPerfect Penmanship';
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.dia-numero {
+    font-family: 'KGPerfect Penmanship';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.anio {
+    font-family: 'KGPerfect Penmanship';
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+#countdown-section {
+    text-align: center;
+}
+
+.countdown-container {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.countdown-numbers {
+    font-family: 'Monofonto';
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.countdown-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+.countdown-labels span {
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
 }
