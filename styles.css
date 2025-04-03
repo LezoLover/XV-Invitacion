@@ -4,23 +4,13 @@
 }
 
 @font-face {
-    font-family: 'Lathin Sandy';
-    src: url('fonts/LathinSandy.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'Lobster';
-    src: url('fonts/Lobster-Regular.ttf') format('truetype');
+    src: url('fonts/Lobster.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Monofonto';
     src: url('fonts/Monofonto.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Sofia';
-    src: url('fonts/Sofia.ttf') format('trueype');
 }
 
 body, html {
@@ -88,7 +78,7 @@ body, html {
 
 .texto-normal {
     font-family: 'Lobster';
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 10px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
@@ -169,10 +159,6 @@ body, html {
     transition: transform 0.3s ease-in-out;
 }
 
-.foto-invitacion:hover {
-    transform: scale(1.05);
-}
-
 /* Estilo para el reproductor de audio */
 audio {
     width: 80%;
@@ -195,6 +181,7 @@ audio {
     gap: 20px;
     margin-top: 10px;
 }
+
 .icono-dresscode {
     width: 80px;
     height: auto;
@@ -206,10 +193,6 @@ audio {
     cursor: pointer;
     animation: bounce 1.2s infinite ease-in-out;
     transition: transform 0.2s ease-in-out;
-}
-
-.icono-dresscode:hover, .icono-regalo:hover, .icono-confirmar:hover, .mapa-img:hover {
-    transform: scale(1.15);
 }
 
 #countdown-section {
