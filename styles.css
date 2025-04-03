@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'Honey Salt';
-    src: url('fonts/HoneySalt.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'KGPerfect Penmanship';
     src: url('fonts/KGPerfectPenmanship.otf') format('opentype');
 }
@@ -14,8 +9,18 @@
 }
 
 @font-face {
+    font-family: 'Lobster';
+    src: url('fonts/Lobster-Regular.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Monofonto';
     src: url('fonts/Monofonto.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('fonts/Sofia.ttf') format('trueype');
 }
 
 body, html {
@@ -35,6 +40,7 @@ body, html {
 }
 
 .slide {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -42,30 +48,47 @@ body, html {
     align-items: center;
     color: white;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
-    background: url('background.png') no-repeat center center;
-    background-size: cover;
     padding: 0 20px;
     box-sizing: border-box;
     transition: opacity 0.5s ease-in-out;
     scroll-snap-align: start;
+    background: url('imgs/background.png') no-repeat center center;
+    background-size: cover;
 }
 
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+.slide * {
+    position: relative;
+    z-index: 2;
+}
+
+
 .titulo-cursiva {
-    font-family: 'Lathin Sandy';
+    font-family: 'Lobster';
     font-size: 40px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
 
 .subtitulo-cursiva {
-    font-family: 'Lathin Sandy';
-    font-size: 25px;
+    font-family: 'Lobster';
+    font-size: 28px;
     margin-top: 10px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
 
 .texto-normal {
-    font-family: 'Honey Salt';
-    font-size: 16px;
+    font-family: 'Lobster';
+    font-size: 14px;
     margin-top: 10px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
@@ -124,6 +147,69 @@ body, html {
     font-size: 1.5em;
     margin-top: 10px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+/* Estilos para la sección de la foto y canción */
+#cancion-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Estilo para la foto */
+.foto-invitacion {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto-invitacion:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el reproductor de audio */
+audio {
+    width: 80%;
+    max-width: 300px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.iconos-dresscode {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+.icono-dresscode {
+    width: 80px;
+    height: auto;
+}
+
+.icono-regalo, .icono-confirmar, .mapa-img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    animation: bounce 1.2s infinite ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icono-dresscode:hover, .icono-regalo:hover, .icono-confirmar:hover, .mapa-img:hover {
+    transform: scale(1.15);
 }
 
 #countdown-section {

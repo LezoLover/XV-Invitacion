@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación XV Años</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        document.write(`<link rel="stylesheet" href="styles.css?v=${new Date().getTime()}">`);
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
+
 <body>
     <div class="container">
+        <!-- Canción y Foto -->
+        <section class="slide" id="cancion-foto">
+            <img src="imgs/foto.png" alt="Foto de María del Carmen" class="foto-invitacion">
+            <audio controls autoplay loop>
+                <source src="audio/Veo_en_ti_la_luz.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <!-- Portada -->
         <section class="slide" id="mis-xv">
             <h1 class="titulo-cursiva">Mis XV</h1>
             <p class="texto-claro">MARIA DEL CARMEN</p>
-            
+
             <div class="fecha-container">
                 <p class="mes">JUNIO</p>
                 <div class="linea"></div>
@@ -24,24 +43,67 @@
             </div>
         </section>
 
+        <!-- Presentación -->
         <section class="slide" id="bendicion">
             <p class="subtitulo-cursiva">Con la bendición de mis padres y abuelos</p>
             <p class="texto-normal">Virginia Velázquez Enriquez</p>
             <p class="texto-normal">Miriam Guadalupe Cruz Velázquez</p>
             <p class="texto-normal">David Orduña Suárez</p>
-            
+
             <p class="subtitulo-cursiva">Y mis padrinos</p>
             <p class="texto-normal">Jesús Velázquez Enriquez</p>
             <p class="texto-normal">Mercedes Guadalupe Rico Cervantes</p>
-        </section>        
-
-        <section class="slide" id="agradecimientos">
-            <p class="texto-normal">Agradezco a Dios por cada bendición en mi vida, a mi familia por hacer este sueño realidad y por estar a mi lado en cada momento. A partir de hoy, comienzo nuevos caminos por recorrer y nuevas etapas en mi vida. Este día tan anhelado ha llegado, y quiero compartir con ustedes un momento inolvidable.</p>
-            <h2 class="subtitulo-cursiva">Ceremonia Religiosa</h2>
-            <p class="texto-normal">Parroquia del Misterio del Pentecostés (5:00pm)</p>
-            <a href="https://maps.google.com" target="_blank">Ver ubicación</a>
         </section>
 
+        <!-- Agradecimientos -->
+        <section class="slide" id="agradecimientos">
+            <p class="texto-normal">Agradezco a Dios por cada bendición en mi vida, a mi familia por hacer este sueño
+                realidad y por estar a mi lado en cada momento. A partir de hoy, comienzo nuevos caminos por recorrer y
+                nuevas etapas en mi vida. Este día tan anhelado ha llegado, y quiero compartir con ustedes un momento
+                inolvidable.</p>
+            <h2 class="subtitulo-cursiva">Ceremonia Religiosa</h2>
+            <p class="texto-normal">Parroquia del Misterio del Pentecostés</p>
+            <p class="texto-normal">Av. Cimatario 201, Col. El Marqués, Qro.</p>
+            <a href="https://maps.app.goo.gl/14K5TvZwn1Gmy9AH6" target="_blank">
+                <img src="imgs/mapa.png" alt="Ubicación de la ceremonia" class="mapa-img">
+            </a>
+            <p class="texto-normal">Hora: 5:00pm</p>
+            <p class="texto-normal">Te invito a acompañarme en este momento tan especial.</p>
+            <p class="texto-normal">Tu presencia es un regalo invaluable.</p>
+        </section>
+
+        <!-- Fiesta -->
+        <section class="slide" id="fiesta">
+            <h2 class="titulo-cursiva">Fiesta</h2>
+            <p class="texto-normal">Salón de Eventos "Villagrand"</p>
+            <p class="texto-normal">Sonora 18, Col. San José de los Olvera, Qro.</p>
+            <a href="https://maps.app.goo.gl/6Dnb9ZTJJgucdAcb9" target="_blank">
+                <img src="imgs/mapa.png" alt="Mapa de la ubicación de la fiesta" class="mapa-img">
+            </a>
+            <p class="texto-normal">Hora: 7:30pm</p>
+            <p class="texto-normal">Recuerda que la fiesta es un momento para disfrutar y celebrar juntos.</p>
+            <p class="texto-normal">¡No olvides traer tu mejor sonrisa!</p>
+        </section>
+
+        <!-- DressCode -->
+        <section class="slide" id="dresscode">
+            <h2 class="titulo-cursiva">Dress Code</h2>
+            <p class="subtitulo-cursiva">Formal</p>
+            <div class="iconos-dresscode">
+                <img src="imgs/traje.png" alt="Traje" class="icono-dresscode">
+                <img src="imgs/vestido.png" alt="Vestido" class="icono-dresscode">
+            </div>
+            <p class="texto-normal">Recuerda que la elegancia es clave para este evento especial.</p>
+
+            <!-- Tablero pinterest gustos ideas de regalo -->
+            <h2 class="subtitulo-cursiva">Ideas de Regalo</h2>
+            <p class="texto-normal">Si deseas hacerme un regalo, aquí tienes algunas ideas:</p>
+            <a href="https://www.pinterest.com.mx/María_del_Carmen_Orduña/" target="_blank">
+                <img src="imgs/regalo.png" alt="Regalo" class="icono-regalo">
+            </a>
+        </section>
+
+        <!-- Cuenta Regresiva -->
         <section class="slide" id="countdown-section">
             <h1 class="titulo-cursiva">Cuenta Regresiva</h1>
             <div class="countdown-container">
@@ -53,9 +115,19 @@
                     <span>S</span>
                 </div>
             </div>
+
+            <!-- Link a google forms -->
+            <h2 class="subtitulo-cursiva">Confirma tu Asistencia</h2>
+            <p class="texto-normal">Por favor, confirma tu asistencia a la fiesta.</p>
+            <a href="https://forms.gle/4v1x2F5G6Z3g7J8y7" target="_blank" class="btn-confirmar">
+                <img src="imgs/portapapeles.png" alt="Confirmar Asistencia" class="icono-confirmar">
+            </a>
         </section>
     </div>
-    
-    <script src="script.js"></script>
+
+    <script>
+        document.write(`<script src="script.js?v=${new Date().getTime()}"><\/script>`);
+    </script>
 </body>
+
 </html>
