@@ -153,6 +153,17 @@
     <script>
         document.write(`<script src="script.js?v=${new Date().getTime()}"><\/script>`);
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            const audio = document.querySelector('audio');
+            document.body.addEventListener('click', () =>
+            {
+                audio.play();
+            }, { once: true });
+        });
+    </script>
 </body>
 
 </html>
