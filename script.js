@@ -1,6 +1,6 @@
 // Función de cuenta regresiva
 function updateCountdown() {
-    const targetDate = new Date('2025-06-14T19:30:00'); // Cambia a tu fecha objetivo
+    const targetDate = new Date('2025-06-14T19:00:00'); // Cambia a tu fecha objetivo
     const now = new Date();
     const diff = targetDate - now;
 
